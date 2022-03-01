@@ -1,0 +1,167 @@
+body {
+    background-image: url("../imagenes/texture.png");
+}
+
+main {
+    overflow: hidden;
+}
+
+.logo{
+    width: 150px;
+}
+
+.text-white{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    z-index: 5;
+}
+
+.banner {
+    position: relative;
+    background-image: url("../imagenes/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.fondo {
+    height: 100%;
+    margin-left: 150px;
+}
+
+.fondo h1 {
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.fondo h3 {
+    font-size: 140px;
+}
+
+.sesion-2,
+.sesion-6 {
+    background-image: url("../imagenes/imagen-fondo-diagonal-gris-sobres.png");
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+h3 {
+    font-family: 'Staatliches';
+}
+
+.sesion-3 {
+    background-image: url("../imagenes/fondo-sesion3.jpg");
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.description h1 {
+    font-size: 70px;
+    font-weight: normal;
+}
+
+.sesion-5 {
+    background-image: url("../imagenes/fondo-sesion5.jpg");
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.footer {
+    background-image: url("../imagenes/fondofooter.jpg");
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footerList {
+    list-style: none;
+}
+
+.linkFooter {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.linkFooter:hover {
+    text-decoration: none;
+}
+
+.ico-plus {
+    position: relative;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row-reverse !important;
+    }
+
+    .navbar-nav {
+        background-color: rgba(0,0,0,.7);
+        padding: 10px 50px;
+    }
+
+    .navbar-toggler {
+        background: rgba(255, 255, 255, 1) !important;
+        border-color: rgba(255, 255, 255, 1);
+    }
+}
+
+@media (max-width: 560px) {
+    .fondo {
+        height: 100%;
+        margin-left: 10px;
+    }
+
+    .fondo h1 {
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 1;
+    }
+
+    .fondo h3 {
+        font-size: 100px;
+    }
+
+    .description h1 {
+        font-size: 40px;
+        font-weight: normal;
+    }
+
+    .sesion-5 {
+        display: none !important;
+    }
+
+    .footerList {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .social {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .copyright {
+        width: 90%;
+        text-align: center;
+    }
+}
