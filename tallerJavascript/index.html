@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller JS Victor Suárez</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="ejercios">
+        <h1 class="ejercicios-title">Ejercicios JavaScript</h1>
+        <h2 class="ejercicios-subtitle">Victor Suárez</h2>
+
+        <div class="ejercicio-1">
+            <p>1. Realiza el cálculo del salario que debe recibir un trabajador que gana x salario con un descuento del 8% por salud y
+            8% por pensión.</p>
+            <fieldset>
+                <legend>Salario</legend>
+                <label>Ingrese el salario neto:</label>
+                <input type="number" class="salario">
+                <button class="salario-btn btn">CALCULAR</button>
+                <p class="salario-salud"></p>
+                <p class="salario-pension"></p>
+                <p class="salario-total"></p>
+            </fieldset>
+        </div>
+
+        <div class="ejercicio-2">
+            <p>2. Aplica la fórmula a = (b*h)/2 para calcular el área de un triángulo donde sus dimensiones base y altura se deben
+            pedir al usuario que las digite.</p>
+            <fieldset>
+                <legend>Triangulo</legend>
+                <label>Ingrese la base del triangulo:</label>
+                <input type="number" class="base">
+                <label>Ingrese la altura del triangulo:</label>
+                <input type="number" class="altura">
+                <button class="triangulo-btn btn">CALCULAR</button>
+                <p class="area"></p>
+            </fieldset>
+        </div>
+
+        <div class="ejercicio-3">
+            <p>3. Realiza las operaciones de suma, resta, multiplicación, división, y módulo pidiéndole solo 2 números al usuario.</p>
+            <fieldset>
+                <legend>Operaciones Matematicas</legend>
+                <label>Ingrese el primer numero:</label>
+                <input type="number" class="num1">
+                <label>Ingrese el segundo numero:</label>
+                <input type="number" class="num2">
+                <button class="operaciones-btn btn">CALCULAR</button>
+                <p class="suma"></p>
+                <p class="resta"></p>
+                <p class="multiplicacion"></p>
+                <p class="division"></p>
+                <p class="modulo"></p>
+            </fieldset>
+        </div>
+
+        <div class="ejercicio-4">
+            <p>4. Calcule el sueldo mensual de un trabajador ingresando el número de horas trabajadas en el mes y el valor
+            tanto como de las horas normales de trabajo y las horas extras.</p>
+            <fieldset>
+                <legend>Salario Mensual</legend>
+                <label>Ingrese las horas trabajadas:</label>
+                <input type="number" class="horas"> <br><br>
+                <label>Ingrese el valor de la hora:</label>
+                <input type="number" class="valHora"> <br><br>
+                <label>Ingrese las horas extra trabajadas:</label>
+                <input type="number" class="horaExtra"><br><br>
+                <label>Ingrese valor de las horas extras:</label>
+                <input type="number" class="valExtra"><br><br>
+                <button class="salMensual-btn btn">CALCULAR</button>
+                <p class="horasTrabajadas"></p><br>
+                <p class="SalarioMensual"></p>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="ejercicio-5">
+        <p>5. Digita el ingreso del precio de un producto y se debe calcular el IVA, mostrar cuanto es el IVA que se agrega,
+        mostrar el precio del producto sin IVA y el total a pagar.</p>
+        <fieldset>
+            <legend>IVA Producto</legend>
+            <label>Ingrese el precio del producto:</label>
+            <input type="number" class="precio">
+            <button class="iva-btn btn">CALCULAR</button>
+            <p class="precioProd"></p>
+            <p class="iva"></p>
+            <p class="precioTotal"></p>
+        </fieldset>
+    </div>
+
+    <div class="ejercicio-6">
+        <p>6. Calcule el porcentaje de alumnos y alumnas de un salón de clase, digitando el total de alumnos hombres y mujeres.</p>
+        <fieldset>
+            <legend>Porcentaje Hombres y Mujeres</legend>
+            <label>Ingrese la cantidad de hombres en el salon:</label>
+            <input type="number" class="hombres">
+            <label>Ingrese la cantidad de mujeres en el salon:</label>
+            <input type="number" class="mujeres">
+            <button class="porcentaje-btn btn">CALCULAR</button>
+            <p class="porcenHombres"></p>
+            <p class="porcenMujeres"></p>
+        </fieldset>
+    </div>
+
+    <div class="ejercicio-7">
+        <p>7. Calcule el promedio de 5 notas de un alumno, el rango de cada nota es del 1 al 5.</p>
+        <fieldset>
+            <legend>Promedio nota</legend>
+            <label>Ingrese la primera nota:</label>
+            <input type="number" class="nota1"><br><br>
+            <label>Ingrese la segunda nota:</label>
+            <input type="number" class="nota2"><br><br>
+            <label>Ingrese la tercera nota:</label>
+            <input type="number" class="nota3"><br><br>
+            <label>Ingrese la cuarta nota:</label>
+            <input type="number" class="nota4"><br><br>
+            <label>Ingrese la quinta nota:</label>
+            <input type="number" class="nota5"><br><br>
+            <button class="nota-btn btn">CALCULAR</button>
+            <p class="promNota"></p>
+        </fieldset>
+    </div>
+
+    <div class="ejercicio-8">
+        <p>8. Pide al usuario un número y determina si es par o impar y si es positivo o negativo.</p>
+        <fieldset>
+            <legend>Numero Par o Impar, Positivo o Negativo</legend>
+            <label>Ingrese un numero:</label>
+            <input type="number" class="num">
+            <button class="numb-btn btn">MOSTRAR</button>
+            <p class="numb"></p>
+        </fieldset>
+    </div>
+
+    <div class="ejercicio-9">
+        <p>9. Pide al usuario dos números y determina cual es el número mayor y cual es el menor.</p>
+        <fieldset>
+            <legend>Numero mayor</legend>
+            <label>Ingrese un numero:</label>
+            <input type="number" class="numb1">
+            <label>Ingrese un numero:</label>
+            <input type="number" class="numb2">
+            <button class="numM-btn btn">MOSTRAR</button>
+            <p class="numM"></p>
+        </fieldset>
+    </div>
+
+    <div class="ejercicio-10">
+        <p>10. Pide al usuario que digite un numero del 1 al 7 y Realiza el código correspondiente para saber cuál es el dia de la
+        semana correspondiente al número digitado;</p>
+        <fieldset>
+            <legend>Dia de la semana</legend>
+            <label>Ingrese un numero del 1 al 7:</label>
+            <input type="number" class="dia">
+            <button class="numDia-btn btn">MOSTRAR</button>
+            <p class="numDia"></p>
+        </fieldset>
+    </div>
+
+    <div class="ejercicio-11">
+        <p>11. Se necesita clasificar la etapa de una persona solo pidiéndole como dato su edad. (Si la edad es menor de 18 es
+        adolente), (si la edad está en el rango de 18 a 28 es adulto adolecente), (si la edad está entre 29 a 49 es adulto), (si
+        la edad está entre 50 en adelante es adulto mayor).
+        Mostrar en pantalla la etapa de la persona.
+        </p>
+        <fieldset>
+            <legend>Edad</legend>
+            <label>Ingrese un la edad:</label>
+            <input type="number" class="edad">
+            <button class="edad-btn btn">MOSTRAR</button>
+            <p class="etapa"></p>
+        </fieldset>
+    </div>
+
+    <div class="ejercicio-12">
+        <p>12. Realice una factura de venta, ingrese el valor de 3 productos y calcule lo siguiente:
+        si paga en efectivo paga el valor total.
+        si paga con cupón realice un 3% de descuento
+        si paga a crédito aumente el 5% al total.
+        </p>
+        <fieldset>
+            <legend>Factura</legend>
+            <label>Ingrese el valor del primer producto:</label>
+            <input type="number" class="prod1"><br><br>
+            <label>Ingrese el valor del segundo producto:</label>
+            <input type="number" class="prod2"><br><br>
+            <label>Ingrese el valor del tercer producto:</label>
+            <input type="number" class="prod3"><br><br>
+            <label>Seleccione la forma de pago:</label>
+            <select id="pago">
+                <option value="efectivo">Efectivo</option>
+                <option value="cupon">Cúpon</option>
+                <option value="credito">Crédito</option>
+            </select>
+            <button class="factura-btn btn">MOSTRAR</button>
+            <p class="resulFactura"></p>
+        </fieldset>
+    </div>
+
+    <div class="ejercicio-13">
+        <p>13. Se pide ingresar 3 notas y calcular el promedio de un alumno, mostrar el nivel del alumnos según su promedio:
+        * 00 – 10 = Malo.
+        * 11 – 13 = Regular.
+        * 14 – 16 = Bueno.
+        * 17 – 20 = Muy bueno.
+        </p>
+        <fieldset>
+            <legend>Nivel Alumnos</legend>
+            <label>Ingrese nota 1:</label>
+            <input type="number" class="not1">
+            <label>Ingrese nota 2:</label>
+            <input type="number" class="not2">
+            <label>Ingrese nota 3:</label>
+            <input type="number" class="not3">
+            <button class="nivel-btn btn">MOSTRAR</button>
+            <p class="nivel"></p>
+        </fieldset>
+    </div>
+</body>
+</html>
