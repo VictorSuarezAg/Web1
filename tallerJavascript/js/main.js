@@ -228,4 +228,112 @@ document.addEventListener("DOMContentLoaded", function() {
             nivel.innerHTML = "El promedio es " + promedio + " el nivel del estudiante es Muy Bueno";
         }
     })
+
+     // Ejercicio 14
+    var fecha = document.querySelector('.fecha');
+    var btnEdadFecha = document.querySelector('.edadFecha-btn');
+    var edadFecha = document.querySelector('.edadFecha');
+    
+
+    btnEdadFecha.addEventListener('click', function () {
+        var hoy = new Date();
+        var cumpleanos = new Date(fecha.value);
+        var edad = hoy.getFullYear() - cumpleanos.getFullYear();
+        var mes = hoy.getMonth() - cumpleanos.getMonth();
+
+        if (mes < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+            edad --;
+        }
+
+        edadFecha.innerHTML = "La edad es " + edad;
+    })
+
+    // Ejercicio 15
+    var dHosp = document.querySelector('.dHosp');
+    var edadPac = document.querySelector('.edadPac');
+    var btnhospitalizacion = document.querySelector('.hospitalizacion-btn');
+    var hospitalizacion = document.querySelector('.hospitalizacion');
+
+    btnhospitalizacion.addEventListener('click', function () {
+        var recargo;
+        var costo;
+        var dia;
+        var total;
+
+        if (edadPac.value <= 10) {
+            if (dHosp.value <= 1) {
+                dia = 20000;
+                costo = dia * dHosp.value;
+                recargo = 0
+            } else if (dHosp.value >= 2 && dHosp.value <= 4) {
+                dia = 30000;
+                costo = dia * dHosp.value;
+                recargo = 0;
+            } else if (dHosp.value >= 5 && dHosp.value <= 7) {
+                dia = 25000;
+                costo = dia * dHosp.value;
+                recargo = costo * 0.5;
+            } else if (dHosp.value >= 8) {
+                dia = 15000;
+                costo = dia * dHosp.value;
+                recargo = costo * 0.10;
+            }
+        } else if (edadPac.value >= 11 && edadPac.value <= 17) {
+            if (dHosp.value <= 1) {
+                dia = 20000;
+                costo = dia * dHosp.value;
+                recargo = 0
+            } else if (dHosp.value >= 2 && dHosp.value <= 4) {
+                dia = 30000;
+                costo = dia * dHosp.value;
+                recargo = 0;
+            } else if (dHosp.value >= 5 && dHosp.value <= 7) {
+                dia = 25000;
+                costo = dia * dHosp.value;
+                recargo = 0;
+            } else if (dHosp.value >= 8) {
+                dia = 15000;
+                costo = dia * dHosp.value;
+                recargo = costo * 0.10;
+            }
+        } else if (edadPac.value >= 18 && edadPac.value <= 49) {
+            if (dHosp.value <= 1) {
+                dia = 20000;
+                costo = dia * dHosp.value;
+                recargo = 0
+            } else if (dHosp.value >= 2 && dHosp.value <= 4) {
+                dia = 30000;
+                costo = dia * dHosp.value;
+                recargo = 0;
+            } else if (dHosp.value >= 5 && dHosp.value <= 7) {
+                dia = 25000;
+                costo = dia * dHosp.value;
+                recargo = 0;
+            } else if (dHosp.value >= 8) {
+                dia = 15000;
+                costo = dia * dHosp.value;
+                recargo = costo * 0.15;
+            }
+        } else if (edadPac.value >= 50) {
+            if (dHosp.value <= 1) {
+                dia = 20000;
+                costo = dia * dHosp.value;
+                recargo = 0
+            } else if (dHosp.value >= 2 && dHosp.value <= 4) {
+                dia = 30000;
+                costo = dia * dHosp.value;
+                recargo = 0;
+            } else if (dHosp.value >= 5 && dHosp.value <= 7) {
+                dia = 25000;
+                costo = dia * dHosp.value;
+                recargo = costo * 0.15;
+            } else if (dHosp.value >= 8) {
+                dia = 15000;
+                costo = dia * dHosp.value;
+                recargo = costo * 0.20;
+            }
+        }
+        total = costo + recargo;
+        hospitalizacion.innerHTML = "Los dias de hospitalizacion fueron " + dHosp.value + " el valor del día es $" + dia + " el valor del recargo es $" + recargo + " el total a pagar es $" + total;
+    })
 });
