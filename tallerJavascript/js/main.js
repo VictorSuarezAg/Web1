@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     btnIva.addEventListener('click', function () {
         var ivaProducto = precio.value * iva;
-        var precioProductoIva = (precio.value + ivaProducto);
         precioProd.innerHTML = "El precio del producto sin iva es " + precio.value;
         ivaProd.innerHTML = "El valor del iva es " + ivaProducto;
         PrecioTotal.innerHTML = "El precio del producto con iva es " + (precio.value * iva + parseInt(precio.value));
@@ -100,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     btnNota.addEventListener('click', function () {
         var notaFinal = (parseFloat(nota1.value) + parseFloat(nota2.value) + parseFloat(nota3.value) + parseFloat(nota4.value) + parseFloat(nota5.value)) / 5;
-        promNota.innerHTML = "El promedio de la nota es " + notaFinal.toFixed(1);
+        promNota.innerHTML = "Las notas son " + nota1.value + ", " + nota2.value + ", " + nota3.value + ", " + nota4.value + ", " + nota5.value + ", el promedio de la nota es " + notaFinal.toFixed(1);
     })
 
      // Ejercicio 8
@@ -111,15 +110,15 @@ document.addEventListener("DOMContentLoaded", function() {
     btnNumb.addEventListener('click', function () {
         if (Number(num.value) > 0) {
             if (Number(num.value) % 2 == 0) {
-                numb.innerHTML = "El numero es par y es positivo";
+                numb.innerHTML = "El numero " + num.value + " es par y es positivo";
             } else {
-                numb.innerHTML = "El numero es impar y es positivo";
+                numb.innerHTML = "El numero " + num.value + " es impar y es positivo";
             }
         } else {
             if (Number(num.value) % 2 == 0) {
-                numb.innerHTML = "El numero es par y es negativo";
+                numb.innerHTML = "El numero " + num.value + " es par y es negativo";
             } else {
-                numb.innerHTML = "El numero es impar y es negativo";
+                numb.innerHTML = "El numero " + num.value + " es impar y es negativo";
             }
         }
     })
@@ -178,13 +177,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     btnEdad.addEventListener('click', function () {
         if (edad.value < 18) {
-            etapa.innerHTML = "Se encuentra en etapa adolescente"
+            etapa.innerHTML = "La persona tiene " + edad.value + " y se encuentra en etapa adolescente"
         } else if (edad.value >= 18 && edad.value <= 28) {
-            etapa.innerHTML = "Se encuentra en etapa adulto adolescente"
+            etapa.innerHTML = "La persona tiene " + edad.value + " y se encuentra en etapa adulto adolescente"
         } else if (edad.value >= 29 && edad.value <= 49) {
-            etapa.innerHTML = "Se encuentra en etapa adulta"
+            etapa.innerHTML = "La persona tiene " + edad.value + " y se encuentra en etapa adulta"
         } else if (edad.value >= 50) {
-            etapa.innerHTML = "Se encuentra en etapa adulto mayor"
+            etapa.innerHTML = "La persona tiene " + edad.value + " y se encuentra en etapa adulto mayor"
         }
     })
 
@@ -200,12 +199,13 @@ document.addEventListener("DOMContentLoaded", function() {
         var valorTotal = Number(prod1.value) + Number(prod2.value) + Number(prod3.value);
         var descCupon = valorTotal * 0.3;
         var incrCredito = valorTotal * 0.5;
+
         if (pago.value == 'cupon') {
-            resulFactura.innerHTML = "El total a pagar con " + pago.value + " es $" + (valorTotal - descCupon) ;
+            resulFactura.innerHTML = "El valor del producto 1 es $" + prod1.value + ", el valor del producto 2 es $" + prod2.value + ", el valor del producto 3 es $" + prod3.value + ", el total a pagar con " + pago.value + " es $" + (valorTotal - descCupon) + ", con un descuento de $" + descCupon ;
         } else if (pago.value == 'credito') {
-            resulFactura.innerHTML = "El total a pagar con " + pago.value + " es $" + (valorTotal + incrCredito) ;
+            resulFactura.innerHTML = "El valor del producto 1 es $" + prod1.value + ", el valor del producto 2 es $" + prod2.value + ", el valor del producto 3 es $" + prod3.value + ", el total a pagar con " + pago.value + " es $" + (valorTotal + incrCredito) + ", con un incremento de $" + incrCredito;
         } else {
-            resulFactura.innerHTML = "El total a pagar con " + pago.value + " es $" + valorTotal;
+            resulFactura.innerHTML = "El valor del producto 1 es $" + prod1.value + ", el valor del producto 2 es $" + prod2.value + ", el valor del producto 3 es $" + prod3.value + ", el total a pagar con " + pago.value + " es $" + valorTotal;
         }
     })
 
@@ -219,13 +219,13 @@ document.addEventListener("DOMContentLoaded", function() {
     btnNivel.addEventListener('click', function () {
         var promedio = (Number(not1.value) + Number(not2.value) + Number(not3.value)) / 3;
         if (promedio >= 0 && promedio <= 10) {
-            nivel.innerHTML = "El promedio es " + promedio + " el nivel del estudiante es Malo";
+            nivel.innerHTML = "Las notas son " + not1 + ", " + not2 + ", " + not3 + " el promedio es " + promedio + " el nivel del estudiante es Malo";
         } else if (promedio >= 11 && promedio <= 13) {
-            nivel.innerHTML = "El promedio es " + promedio + " el nivel del estudiante es Regular";
+            nivel.innerHTML = "Las notas son " + not1 + ", " + not2 + ", " + not3 + " el promedio es " + promedio + " el nivel del estudiante es Regular";
         } else if (promedio >= 14 && promedio <= 16) {
-            nivel.innerHTML = "El promedio es " + promedio + " el nivel del estudiante es Bueno";
+            nivel.innerHTML = "Las notas son " + not1 + ", " + not2 + ", " + not3 + " el promedio es " + promedio + " el nivel del estudiante es Bueno";
         } else if (promedio >= 17 && promedio <= 20) {
-            nivel.innerHTML = "El promedio es " + promedio + " el nivel del estudiante es Muy Bueno";
+            nivel.innerHTML = "Las notas son " + not1 + ", " + not2 + ", " + not3 + " el promedio es " + promedio + " el nivel del estudiante es Muy Bueno";
         }
     })
 
@@ -239,13 +239,27 @@ document.addEventListener("DOMContentLoaded", function() {
         var hoy = new Date();
         var cumpleanos = new Date(fecha.value);
         var edad = hoy.getFullYear() - cumpleanos.getFullYear();
-        var mes = hoy.getMonth() - cumpleanos.getMonth();
+        var mes = (hoy.getMonth() + 1) - cumpleanos.getMonth();
+        var meses = 0;
+        var m;
 
-        if (mes < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+        if (mes < 0 || m === 0 && hoy.getDate() < cumpleanos.getDate()) {
             edad --;
         }
 
-        edadFecha.innerHTML = "La edad es " + edad;
+        if (hoy.getMonth() > cumpleanos.getMonth()) {
+            meses = hoy.getMonth() - cumpleanos.getMonth();
+        }else if (hoy.getMonth() < cumpleanos.getMonth()) {
+            meses = 12 - (cumpleanos.getMonth() - hoy.getMonth());
+        }else if (hoy.getMonth() == cumpleanos.getMonth() && hoy.getDate() > cumpleanos.getDate() ){
+            if (hoy.getMonth() - cumpleanos.getMonth() == 0){
+                meses=0;
+            }else{
+                meses=11;
+            }
+        }
+
+        edadFecha.innerHTML = "La edad es " + edad + " año(s) " + meses + " meses.";
     })
 
     // Ejercicio 15
